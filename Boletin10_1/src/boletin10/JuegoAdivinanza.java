@@ -33,8 +33,10 @@ public class JuegoAdivinanza {
        resultado=rdm.nextInt(49)+1;
      do{
          numero=Integer.parseInt(JOptionPane.showInputDialog("Introduce numero"));
-         if ((numero-resultado)==0&&(resultado-numero)==0)
+         if ((numero-resultado)==0&&(resultado-numero)==0){
              JOptionPane.showMessageDialog(null,"Has acertado");
+             resultado=rdm.nextInt(49)+1;
+         }
          else if ((numero-resultado)<=5&&(resultado-numero)<=5)
              JOptionPane.showMessageDialog(null,"Estas muy cerca");
          else if ((numero-resultado)<10&&(resultado-numero)<10)
